@@ -1,0 +1,16 @@
+body {
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+#song-form input::placeholder {
+    color: #6b7280;
+}
+
+#song-list > div {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#song-list > div:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}

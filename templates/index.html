@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneList</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+
+    <div class="max-w-3xl mx-auto px-4 py-10">
+        <h1 class="text-4xl font-bold text-center mb-2 text-emerald-400">TuneList</h1>
+        <p class="text-center text-gray-400 mb-10">Track your music. One song at a time.</p>
+
+        <!-- Add Song Form -->
+        <form id="song-form" class="bg-gray-900 rounded-2xl p-6 mb-10 shadow-lg border border-gray-800">
+            <h2 class="text-lg font-semibold mb-4 text-gray-200">Add a Song</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <input type="text" id="title" placeholder="Title" required
+                    class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <input type="text" id="artist" placeholder="Artist" required
+                    class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <input type="text" id="album" placeholder="Album (optional)"
+                    class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <input type="number" id="year" placeholder="Year" required
+                    class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <input type="text" id="genre" placeholder="Genre" required
+                    class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+            </div>
+
+            <div class="flex items-center justify-between">
+                <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
+                    <input type="checkbox" id="listened" class="accent-emerald-500 w-4 h-4">
+                    Already listened
+                </label>
+                <button type="submit"
+                    class="bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-6 py-2 rounded-lg text-sm transition">
+                    Add Song
+                </button>
+            </div>
+        </form>
+
+        <!-- Song List -->
+        <div id="song-list" class="space-y-4"></div>
+
+        <!-- Empty State -->
+        <p id="empty-state" class="text-center text-gray-500 mt-6 hidden">
+            No songs yet. Add one above!
+        </p>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
