@@ -2,7 +2,8 @@ body {
     font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
-#song-form input::placeholder {
+#song-form input::placeholder,
+#spotify-search::placeholder {
     color: #6b7280;
 }
 
@@ -13,4 +14,12 @@ body {
 #song-list > div:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+#search-results > div {
+    transition: transform 0.1s ease;
+}
+
+#search-results > div:active {
+    transform: scale(0.99);
 }

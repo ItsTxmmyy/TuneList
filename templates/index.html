@@ -13,9 +13,26 @@
         <h1 class="text-4xl font-bold text-center mb-2 text-emerald-400">TuneList</h1>
         <p class="text-center text-gray-400 mb-10">Track your music. One song at a time.</p>
 
-        <!-- Add Song Form -->
-        <form id="song-form" class="bg-gray-900 rounded-2xl p-6 mb-10 shadow-lg border border-gray-800">
-            <h2 class="text-lg font-semibold mb-4 text-gray-200">Add a Song</h2>
+        <!-- Spotify Search -->
+        <div class="bg-gray-900 rounded-2xl p-6 mb-4 shadow-lg border border-gray-800">
+            <h2 class="text-lg font-semibold mb-4 text-gray-200">Search Spotify</h2>
+            <input type="text" id="spotify-search" placeholder="Search for a song..."
+                class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+            <div id="search-results" class="mt-4 space-y-3 hidden"></div>
+        </div>
+
+        <!-- Manual Add Toggle -->
+        <button id="manual-toggle"
+            class="text-sm text-gray-500 hover:text-gray-300 transition mb-4 flex items-center gap-1.5">
+            <svg id="toggle-arrow" class="w-3.5 h-3.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            Add manually instead
+        </button>
+
+        <!-- Manual Add Song Form (collapsed by default) -->
+        <form id="song-form" class="bg-gray-900 rounded-2xl p-6 mb-10 shadow-lg border border-gray-800 hidden">
+            <h2 class="text-lg font-semibold mb-4 text-gray-200">Add a Song Manually</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <input type="text" id="title" placeholder="Title" required
@@ -47,7 +64,7 @@
 
         <!-- Empty State -->
         <p id="empty-state" class="text-center text-gray-500 mt-6 hidden">
-            No songs yet. Add one above!
+            No songs yet. Search Spotify or add one manually!
         </p>
     </div>
 
