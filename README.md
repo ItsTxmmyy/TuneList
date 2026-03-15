@@ -12,7 +12,7 @@ A music playlist tracker built with FastAPI and vanilla JavaScript. Search for s
 ## Tech Stack
 
 - **Backend:** FastAPI, Pydantic, httpx
-- **Frontend:** Jinja2 templates, Tailwind CSS (CDN), vanilla JavaScript
+- **Frontend:** Jinja2 templates, vanilla JavaScript
 - **API:** Spotify Web API (Client Credentials Flow)
 
 ## Setup
