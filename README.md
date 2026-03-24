@@ -66,3 +66,5 @@ Visit [http://127.0.0.1:8000](http://127.0.0.1:8000)
 | POST | `/songs` | Add a song |
 | PUT | `/songs/{id}` | Update a song |
 | DELETE | `/songs/{id}` | Delete a song |
+
+<img width="1132" height="692" alt="Image" src="https://github.com/user-attachments/assets/e7b3b1d0-cd9c-415f-b342-ff0ab989c90a" />
